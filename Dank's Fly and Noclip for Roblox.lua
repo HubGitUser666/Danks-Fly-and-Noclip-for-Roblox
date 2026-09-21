@@ -341,7 +341,7 @@ local function createGui()
 	instructions.Size = UDim2.new(1, -20, 0, 35)
 	instructions.Position = UDim2.new(0, 10, 0, 100)
 	instructions.BackgroundTransparency = 1
-	instructions.Text = "F = Fly    N = Noclip"
+	instructions.Text = "Q = Fly    Z = Noclip"
 	instructions.TextColor3 = Color3.fromRGB(210, 230, 255)
 	instructions.TextSize = 16
 	instructions.Font = Enum.Font.SourceSans
@@ -366,9 +366,9 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
 		return
 	end
 
-	if input.KeyCode == Enum.KeyCode.F then
+	if input.KeyCode == Enum.KeyCode.Q then
 		toggleFlying()
-	elseif input.KeyCode == Enum.KeyCode.N then
+	elseif input.KeyCode == Enum.KeyCode.Z then
 		setNoclip(not noclip)
 	elseif input.KeyCode == Enum.KeyCode.W then
 		keys.W = true
